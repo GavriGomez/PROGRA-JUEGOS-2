@@ -4,26 +4,24 @@ using UnityEngine;
 using UnityEngine.Events;
 public abstract class ObjetoInteractivo : MonoBehaviour
 {
-    public string nombreAccion; //prompt
-    //Este metodo es abstracto, es una promesa de la accion a realizar. Se defie en una clase que hereda esta
-
+    public string nombreAccion; //prompt  //Este metodo es abstracto, es una promesa de la accion a realizar. Se defie en una clase que hereda esta
     public abstract void Activar();
     public bool enContacto = false;
-    private void OnTriggerEnter(Collider other)
 
     void Start()
     {
         //condicionar a que el contacto sea con el Player
-        //SSolicito al controlador de UI que nmuestre la info de prompt de este objeto interactuable
+        //Solicito al controlador de UI que nmuestre la info de prompt de este objeto interactuable
 
-        ControladorUI.Instancia.MostrarInteractuable(this);
-        enContacto == true; 
+        ControladorUI.Instancia.MostrarInteractivo(this);
+        enContacto = true; //Un = lo convierte, dos == lo confirma
+
     }
 
     private void OnTriggerExit (Collider other)
     {
         //Solicito al controlador que deje de mostrar
-        ControladorUI.Instancia.MostrarInteractuable(null);
+        ControladorUI.Instancia.MostrarInteractivo(null);
         enContacto = false;
 
     }

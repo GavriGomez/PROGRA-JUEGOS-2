@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LamparaInteractiva : ObjetoInteractuable
+public class LamparaInteractiva : ObjetoInteractivo
 {
     public Light laLuz;
 

@@ -11,14 +11,14 @@ public class ControladorUI : MonoBehaviour
     public static ControladorUI Instancia; 
 
     public GameObject grupoPromptInteraccion;
-    public TextMeshProGUI textoPrompt;
+    public TextMeshProUGUI textoPrompt;
 
     private void Start()
     {
         Instancia = this; 
     }
 
-    public void MostrarInteractuable (ObjetoInteractuable obj)
+    public void MostrarInteractivo (ObjetoInteractivo obj)
     {
         //este metodo se invoca por cualquier otro script del juego para que se muestre en el
         //UI el prompt de un objeto interactuable

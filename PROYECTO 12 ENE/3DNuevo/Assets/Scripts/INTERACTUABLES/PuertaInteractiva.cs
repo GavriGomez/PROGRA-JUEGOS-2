@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuertaInteractiva : ObjetoInteractuable 
+public class PuertaInteractiva : ObjetoInteractivo
  
 {
     public float rotacionAbierto = 0;
